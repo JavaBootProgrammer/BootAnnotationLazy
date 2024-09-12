@@ -3,11 +3,23 @@ package com.google;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 
-@Component
-@Lazy(value = false)
+@Component("PersonSettingsPage")
 public class PersonSettingsPage {
-    private String firstName;
+    private String firstName="ram";
     private String lastName;
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
     private String email;
 
     public PersonSettingsPage(String firstName, String lastName, String email) {
@@ -19,6 +31,9 @@ public class PersonSettingsPage {
     public PersonSettingsPage(){
         System.out.println("default constructor");
     }
+
+
+
 
 
 }
